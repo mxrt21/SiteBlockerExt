@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "BlockSite",
+  "version": "1.0.0",
+  "description": "An Extension that blocks time wasting Websites, so you can keep on focussing on what you want.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.facebook.com/*",
+        "https://www.netflix.com/*",
+        "https://www.tiktok.com/*",
+        "https://www.instagram.com/*",
+        "https://www.spotify.com/*",
+        "https://twitter.com/*"
+
+
+
+
+      ],
+      "js": [
+        "js/Content.js"
+      ],
+      "css": [
+        "css/style.css"
+      ]
+    }
+  ],
+  "default_action": {
+    "default_popup": "Popup.html",
+    "default_title": "SiteBlocker"
+  },
+  "web_accessible_resources": [
+    "css/style.css"
+  ]
+}
